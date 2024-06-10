@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    padding: 30px;
+  }
+   @media (min-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+  } 
+  
+  .left {
+    animation: slideInLeft 800ms ease-in-out;
+  }
+  .leftCloudSlow {
+    animation: slideInLeft 1.2s ease-in-out;
+  }
+  .leftCloudSpeed {
+    animation: slideInLeft 1s ease-in-out;
+  }
+  
+  .right {
+    animation: slideInRight 800ms ease-in-out;
+  }
+  .rightCloudSpeed {
+    animation: slideInRight 1.2s ease-in-out;
+  }
+  .rightCloudSlow {
+    animation: slideInRight 1.6s ease-in-out;
+  }
+  
+  .rightcloud {
+    animation: slideInRight 2s ease-in-out;
+  }
+
+
+  .animate.left {
+    animation: slideOutLeft 1s ease-in-out;
+  }
+  
+  .animate.right {
+    animation: slideOutRight 1s ease-in-out;
+  }
+
+  .container.animate .left {
+    transform: translateX(0%);
+  }
+  
+  .container.animate .right {
+    transform: translateX(0%);
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOutLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slideOutRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
